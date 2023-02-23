@@ -1,0 +1,27 @@
+
+#分类模型 ( model classification ):分类指将一个观测值放入一组离散类中的一个，例如猫、狗；模型只是将这些数据类转换为输出的数学方法
+#较于传统的建模，使用深度学习可以使用数据构建模型
+#分类示例一：手写字迹识别
+  ##Importing Data
+  Instructions are in the task pane to the left. Complete and submit each task one at a time.
+    ###Task01（任务):将存储在文件 "J.txt" 中的数据读入名为 letter 的变量。
+        #### 使用 readtable 函数从电子表格或文本文件导入表格数据，并将结果以表的形式存储。
+                data = readtable("myfile.xlsx");
+                这将从电子表格 myfile.xlsx 中导入数据，并将其存储在名为 data 的表中。
+                  %letter = readtable("C:\Users\***\Desktop\****_Studying\MachineLearn\J.xlsx");
+                   letter = readtable("J.txt");
+    ###Task02（任务):通过在水平轴上绘制 letter 的 X 变量和在垂直轴上绘制 Y 变量来可视化字母。
+        #### 您可以使用圆点表示法来引用表中的任何单个变量
+                x = mytable.Xdata;
+                y = mytable.Ydata;
+                这样可以从表 mytable 中提取变量 Xdata 并将结果存储在名为 x 的新变量中。同样，变量 Ydata 也会被提取后存储到 y 中。
+                plot(letter.X,letter.Y)
+    ###Task03（任务):默认轴范围会使字母的纵横比失真。您可以使用 axis 命令强制轴保持数据的纵横比。
+        #### 各种子轴控制，参考画布
+                plot(letter.X,letter.Y);
+                axis equal
+    ###Task04（任务):对文件 M.txt 中的数据重复执行相同的导入和绘制任务。
+        #### 子轴同样刻画，对M.txt和V.txt做同等处理//Further Practice
+                letter1 = readtable("M.txt"); letter2 = readtable("V.txt");
+                plot(letter.X,letter.Y);      plot(letter2.X,letter2.Y);
+                axis equal                    axis equal
