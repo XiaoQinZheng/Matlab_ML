@@ -1,1 +1,38 @@
+# 处理数据 Preprocessing Data
+Instructions are in the task pane to the left. Complete and submit each task one at a time.
+###Task01（任务):将表 letter 的变量 X 中的值乘以纵横比 1.5。将结果重新赋给 X，使 letter 包含修正后的数据。
+        #### 使用 您可以使用圆点表示法来提取、修改表中的变量并对其重新赋值，就像处理任何变量一样。
+                x = x + 3;
+                data.XVal = data.XVal + 3;
+                任务:
+                letter = readtable("M.txt");
+                letter.X = letter.X .* 1.5;
+                plot(letter.X,letter.Y)
+                axis equal
+    ###Task02（任务):通过从所有元素中减去第一个值，对表 letter 的 Time 变量进行偏移以从 0 开始。将结果除以 1000 以转换为秒。
+    将结果重新赋给 Time，使 letter 包含调整后的数据。
+        ####提示 从 letter.Time 中减去 letter.Time(1)，然后除以 1000。记住运算顺序。将结果赋给 letter.Time。
+                %finalX = letter.Time(end);
+                %for i in 2 : finalX
+                %    letter.Time(i) = letter.Time(i) / 1000;
+                letter.Time = letter.Time - letter.Time(1)
+                letter.Time = letter.Time/1000
 
+        #### Further Practice
+                %J.txt
+                letter1 = readtable("J.txt")
+                letter1.X = letter1.X .* 1.5;
+                %plot(letter1.X,letter1.Y)
+                %axis equal
+                letter1.Time = letter1.Time/10000;
+                plot(letter1.Time,letter1.X)
+                plot(letter1.Time,letter1.Y)
+
+                %V.txt
+                letter2 = readtable("V.txt")
+                letter2.X = letter2.X .* 1.5;
+                %plot(letter2.X,letter2.Y)
+                %axis equal
+                letter2.Time = letter2.Time/10000;
+                plot(letter2.Time,letter2.X)
+                plot(letter2.Time,letter2.Y)
