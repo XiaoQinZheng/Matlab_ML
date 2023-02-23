@@ -2,8 +2,7 @@
 #分类模型 ( model classification ):分类指将一个观测值放入一组离散类中的一个，例如猫、狗；模型只是将这些数据类转换为输出的数学方法
 #较于传统的建模，使用深度学习可以使用数据构建模型
 #分类示例一：手写字迹识别
-  ##Importing Data
-  Instructions are in the task pane to the left. Complete and submit each task one at a time.
+  
     ###Task01（任务):将存储在文件 "J.txt" 中的数据读入名为 letter 的变量。
         #### 使用 readtable 函数从电子表格或文本文件导入表格数据，并将结果以表的形式存储。
                 data = readtable("myfile.xlsx");
