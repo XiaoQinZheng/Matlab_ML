@@ -36,3 +36,59 @@ Instructions are in the task pane to the left. Complete and submit each task one
                 letter2.Time = letter2.Time/10000;
                 plot(letter2.Time,letter2.X)
                 plot(letter2.Time,letter2.Y)
+                
+                
+# 计算特征 Calculate Features
+Instructions are in the task pane to the left. Complete and submit each task one at a time.
+###Task01（任务):通过提取 letter.Time 的最后一个值并将结果存储在名为 dur 的变量中，来计算书写该字母所需的时间。
+       特征仅仅是根据信号计算的值，例如其持续时间。
+                letter = readtable("M.txt");
+                letter.X = letter.X*1.5;
+                letter.Time = (letter.Time - letter.Time(1))/1000
+                plot(letter.X,letter.Y)
+                axis equal
+                dur = letter.Time(end);
+###Task02（任务):使用 range 函数通过将 letter.Y 的值极差除以 letter.X 的值极差来计算字母的纵横比。将结果赋给名为 aratio 的变量。
+       range 函数返回数组中值的极差。即 range(x) 等效于 max(x) - min(x)
+                %range(letter.X) = max(letter.X)-min(letter.X);
+                %range(letter.Y) = max(letter.Y)-min(letter.Y);
+                aratio = range(letter.Y)/range(letter.X)    %%%% aratio = 1.1228
+           
+### 更改文件名，然后重新运行脚本，为 J.txt 和 V.txt 中的字母计算相同的两个特征。这些特征的值与您对这些字母的期望是否一致？
+       ####Further Practice
+                 %J.txt
+                letter1 = readtable("J.txt");
+                letter1.X = letter1.X*1.5;
+                letter1.Time = (letter1.Time - letter1.Time(1))/10000
+                plot(letter1.X,letter1.Y)
+                axis equal
+
+                dur1 = letter1.Time(end);
+
+                aratio1 = range(letter1.Y)/range(letter1.X)
+
+
+                 %V.txt
+                letter2 = readtable("V.txt");
+                letter2.X = letter2.X*1.5;
+                letter2.Time = (letter2.Time - letter2.Time(1))/10000
+                plot(letter2.X,letter2.Y)
+                axis equal
+
+                dur2 = letter2.Time(end);
+
+                aratio2 = range(letter2.Y)/range(letter2.X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
