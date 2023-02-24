@@ -1,6 +1,6 @@
 ###Task01（任务)：使用 scatter 函数绘制提取的特征，水平轴上为纵横比，垂直轴上为持续时间。
-				MAT 文件 featuredata.mat 包含一个表，其中包含由不同人书写的 470 个字母的提取特征。表 features 有三个变量：
-				AspectRatio 和 Duration（在上一节中计算的两个特征）以及 Character（已知字母）。
+	MAT 文件 featuredata.mat 包含一个表，其中包含由不同人书写的 470 个字母的提取特征。表 features 有三个变量：
+	AspectRatio 和 Duration（在上一节中计算的两个特征）以及 Character（已知字母）。
         #### 使用 features.AspectRatio 和 features.Duration 作为 scatter 函数的输入。
              x = x + 3;
              data.XVal = data.XVal + 3;
